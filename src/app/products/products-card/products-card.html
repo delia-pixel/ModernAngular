@@ -1,13 +1,23 @@
 <mat-card class="product-card">
   <mat-card-header>
     <mat-card-title>{{ product().name }}</mat-card-title>
-    <mat-card-subtitle>Category</mat-card-subtitle>
+    <!-- <mat-card-subtitle>Category</mat-card-subtitle> -->
   </mat-card-header>
 
   <!-- <img mat-card-image src="https://via.placeholder.com/150" alt="Product image" /> -->
   <mat-card-content>
+    @if (product().originalPrice) {
+      <span class="sale-badge">On Sale</span>
+      <p class="price-row">
+        <span class="current-price">{{ product().price }} CAD</span>
+        <span class="original-price">{{ product().originalPrice }} CAD</span>
+      </p>
+    } @else {
+      <p class="price-row">
+        <span class="current-price">{{ product().price }} CAD</span>
+      </p>
+    }
     <p>{{ product().description }}</p>
-    <p class="price">{{ product().price }} CAD</p>
   </mat-card-content>
 
   <mat-card-actions>

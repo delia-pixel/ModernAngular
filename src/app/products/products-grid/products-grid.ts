@@ -29,6 +29,7 @@ export class ProductsGrid {
       name: 'Product 3',
       description: 'Description for product 3',
       price: 79.99,
+      originalPrice: 99.99,
     },
   ]);
 }
