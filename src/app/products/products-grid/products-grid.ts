@@ -54,4 +54,8 @@ export class ProductsGrid {
         product.description.toLocaleLowerCase().includes(term),
     );
   });
+
+  protected onAddToCard(product: Product) {
+    console.log('Product added to cart', product);
+  }
 }
