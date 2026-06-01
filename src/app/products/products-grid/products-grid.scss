@@ -27,3 +27,13 @@
     color: var(--mat-sys-on-surface-variant);
   }
 }
+
+.product-container {
+  display: grid;
+  gap: 1rem;
+}
+
+.search-field {
+  width: 100%;
+  display: block;
+}
