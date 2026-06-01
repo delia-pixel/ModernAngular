@@ -1,15 +1,16 @@
 <mat-card class="product-card">
   <mat-card-header>
-    <mat-card-title>Product Name</mat-card-title>
+    <mat-card-title>{{ product().name }}</mat-card-title>
     <mat-card-subtitle>Category</mat-card-subtitle>
   </mat-card-header>
 
   <!-- <img mat-card-image src="https://via.placeholder.com/150" alt="Product image" /> -->
   <mat-card-content>
-    <p>Short description of the product goes here.</p>
+    <p>{{ product().description }}</p>
+    <p class="price">{{ product().price }} CAD</p>
   </mat-card-content>
 
   <mat-card-actions>
-    <button matButton color="primary">Add to Cart</button>
+    <button matButton color="primary">{{ addButtonLabel() }}</button>
   </mat-card-actions>
 </mat-card>
